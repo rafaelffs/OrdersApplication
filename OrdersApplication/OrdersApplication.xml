@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrdersApplication</name>
+    </assembly>
+    <members>
+        <member name="M:OrdersApplication.Controllers.OrderController.PostOrder(OrdersApplication.DTO.OrderDTO)">
+            <summary>
+            Create an order
+            </summary>
+            <returns>OrderDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.OrderController.GetOrderById(System.Int32)">
+            <summary>
+            Get order by ID
+            </summary>
+            <returns>OrderDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.OrderController.GetOrders(System.Int32,System.Int32)">
+            <summary>
+            Get orders paginated
+            </summary>
+            <returns>OrderDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.OrderController.CancelOrderById(System.Int32)">
+            <summary>
+            Cancel order by ID
+            </summary>
+            <returns>OrderDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.OrderController.UpdateOrderAddressById(System.Int32,OrdersApplication.Models.Location)">
+            <summary>
+            Updated order delivery address by ID
+            </summary>
+            <returns>OrderDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.ProductController.PostProduct(OrdersApplication.DTO.ProductDTO)">
+            <summary>
+            Create a product
+            </summary>
+            <returns>ProductDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.ProductController.GetProductById(System.Int32)">
+            <summary>
+            Get product by ID
+            </summary>
+            <returns>ProductDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.ProductController.GetProducts(System.Int32,System.Int32)">
+            <summary>
+            Get products paginated
+            </summary>
+            <returns>ProductDTO</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.ProductController.DeleteProductById(System.Int32)">
+            <summary>
+            Delete product by ID
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:OrdersApplication.Controllers.ProductController.UpdateProduct(System.Int32,OrdersApplication.DTO.ProductDTO)">
+            <summary>
+            Update a product
+            </summary>
+            <returns>ProductDTO</returns>
+        </member>
+    </members>
+</doc>
