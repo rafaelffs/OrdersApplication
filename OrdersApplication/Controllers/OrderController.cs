@@ -6,7 +6,6 @@ using OrdersApplication.Models;
 using OrdersApplication.Services.Orders;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Web.Http.Description;
 
 namespace OrdersApplication.Controllers
 {
@@ -28,7 +27,6 @@ namespace OrdersApplication.Controllers
         /// <returns>OrderDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(OrderDTO))]
         [HttpPost("PostOrder")]
         public async Task<ActionResult<OrderDTO>> PostOrder(OrderDTO order)
         {
@@ -52,7 +50,6 @@ namespace OrdersApplication.Controllers
         /// <returns>OrderDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(OrderDTO))]
         [HttpGet("GetOrderById{id}")]
         public async Task<ActionResult<OrderDTO>> GetOrderById(int id)
         {
@@ -70,7 +67,6 @@ namespace OrdersApplication.Controllers
         /// <returns>OrderDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(List<OrderDTO>))]
         [HttpGet("GetOrders")]
         public async Task<ActionResult<List<OrderDTO>>> GetOrders(int skip, int pageSize)
         {
@@ -88,7 +84,6 @@ namespace OrdersApplication.Controllers
         /// <returns>OrderDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(OrderDTO))]
         [HttpPut("CancelOrderById{id}")]
         public async Task<ActionResult<OrderDTO>> CancelOrderById(int id)
         {
@@ -106,7 +101,6 @@ namespace OrdersApplication.Controllers
         /// <returns>OrderDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(OrderDTO))]
         [HttpPut("UpdateOrderAddressById")]
         public async Task<ActionResult<OrderDTO>> UpdateOrderAddressById(int id, Location location)
         {

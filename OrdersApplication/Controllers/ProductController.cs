@@ -6,7 +6,6 @@ using OrdersApplication.Models;
 using OrdersApplication.Services.Products;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Web.Http.Description;
 
 namespace OrdersApplication.Controllers
 {
@@ -29,7 +28,6 @@ namespace OrdersApplication.Controllers
         /// <returns>ProductDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(ProductDTO))]
         [HttpPost("PostProduct")]
         public async Task<ActionResult<ProductDTO>> PostProduct(ProductDTO product)
         {
@@ -48,7 +46,6 @@ namespace OrdersApplication.Controllers
         /// <returns>ProductDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(ProductDTO))]
         [HttpGet("GetProductById{id}")]
         public async Task<ActionResult<ProductDTO>> GetProductById(int id)
         {
@@ -66,7 +63,6 @@ namespace OrdersApplication.Controllers
         /// <returns>ProductDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(List<ProductDTO>))]
         [HttpGet("GetProducts")]
         public async Task<ActionResult<List<ProductDTO>>> GetProducts(int skip, int pageSize)
         {
@@ -84,7 +80,6 @@ namespace OrdersApplication.Controllers
         /// <returns>bool</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(bool))]
         [HttpDelete("DeleteProductById{id}")]
         public async Task<ActionResult<bool>> DeleteProductById(int id)
         {
@@ -102,7 +97,6 @@ namespace OrdersApplication.Controllers
         /// <returns>ProductDTO</returns>
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ResponseType(typeof(ProductDTO))]
         [HttpPut("UpdateProduct")]
         public async Task<ActionResult<ProductDTO>> UpdateProduct(int id, ProductDTO product)
         {
