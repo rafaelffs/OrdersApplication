@@ -32,14 +32,17 @@ namespace OrdersApplication.Controllers
         [HttpPost("PostOrder")]
         public async Task<ActionResult<OrderDTO>> PostOrder(OrderDTO order)
         {
+            Order orderModel;
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
+            try
+            {
+                orderModel = await orderService.CreateOrder(mapper.Map<Order>(order));
             }
-
-            Order orderModel = await orderService.CreateOrder(mapper.Map<Order>(order));
-            if (orderModel == null)
-                return NotFound("The selected product is not in the inventory.");
+            catch (System.Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return mapper.Map<OrderDTO>(orderModel);
         }
 

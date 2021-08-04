@@ -52,7 +52,6 @@ namespace OrdersApplication.Services.Products
         public async Task<Product> UpdateProduct(int id, Product product)
         {
             product.Id = id;
-
             dbContext.Entry(product).State = EntityState.Modified;
 
             try

@@ -26,7 +26,7 @@ namespace OrdersApplication.Services.Orders
                 if (productService.ProductExists(order.Products[i].Id))
                     order.Products[i] = productService.GetProductById(order.Products[i].Id).Result;
                 else
-                    return null;
+                    throw new System.ArgumentException("Product not found in the inventory.");
             }
             dbContext.Orders.Add(order);
             await dbContext.SaveChangesAsync();
